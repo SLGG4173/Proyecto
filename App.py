@@ -1,7 +1,9 @@
 from flask import Flask
+from flask import MySQL
 
 app = Flask(__name__)
 
+mysql = MySQL()
 
 @app.route('/')
 def hello_world():
@@ -21,4 +23,3 @@ def delete_contact():
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
-
